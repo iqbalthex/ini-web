@@ -1,0 +1,198 @@
+:root{
+	--base-fsize: 16px;
+}
+
+*{
+	box-sizing: border-box;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+h1{font-size: calc(var(--base-fsize) * 2)}
+h2{font-size: calc(var(--base-fsize) * 1.75)}
+h3{font-size: calc(var(--base-fsize) * 1.5)}
+h4{font-size: calc(var(--base-fsize) * 1.3)}
+h5{font-size: calc(var(--base-fsize) * 1.2)}
+h6{font-size: calc(var(--base-fsize) * 1.1)}
+li{list-style: none}
+a{text-decoration: none}
+p{font-size: var(--base-fsize)}
+
+body{
+	background: #aab;
+	height: 100vh;
+	overflow: hidden;
+}
+
+header{
+	height: 12%;
+	background: #bcc;
+	padding: 5px 0;
+	position: fixed;
+	width: 100%;
+}
+
+
+/* header div1 * * * * * * * * * * * * * * * * * * * */
+
+header > div:first-child{
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 8%;
+}
+
+header nav{width: 40%}
+
+header nav ul{
+	width: 100%;
+	justify-content: end;
+}
+
+header nav li:not(:last-child){margin-right: 1em}
+
+header nav a{
+	background: #ba9;
+	border-radius: 12px;
+	color: #7ff;
+	font-weight: bold;
+	padding: .3em .5em;
+	border: 3px dotted #fff;
+	transition: all .7s;
+}
+
+header nav a:hover{
+	background: #9ff;
+	border-radius: 6px;
+	color: #000;
+	border: 3px dashed #000;
+	letter-spacing: 1.4px;
+	transition: all .7s;
+}
+
+/* * * * * * * * * * * * * * * *  end of header div1 */
+
+
+/* header div2 * * * * * * * * * * * * * * * * * * * */
+
+header > div:last-child{
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	padding: 0 35% 0 10%;
+}
+
+header > div:last-child li:not(:first-child){margin-left: 1em}
+
+header > div:last-child a{
+	background: #abd;
+	border-radius: 12px;
+	color: #f00;
+	font-weight: bold;
+	padding: .3em .5em;
+	border: 3px dotted #0f9;
+	transition: all .7s;
+}
+
+header > div:last-child a:hover{
+	background: #ec7;
+	border-radius: 6px;
+	color: #555;
+	border: 3px dashed #fff;
+	letter-spacing: 1.2px;
+	transition: all .7s;
+}
+
+/* * * * * * * * * * * * * * * *  end of header div2 */
+
+
+aside{
+	padding: 5px;
+	background: #bdd;
+	position: fixed;
+	top: 12vh;
+}
+
+aside button{font-size: 1.6em}
+
+
+/* left aside  * * * * * * * * * * * * * * * * * * * */
+
+#left-aside{
+	height: 88%;
+	align-items: center;
+}
+
+#left-aside p + div{
+	width: 50%;
+	height: 5%;
+}
+
+#left-aside p + div > *{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+#left-aside span{
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+#subject-list div{padding: 0 5px}
+
+aside li li{margin-left: 20px}
+
+/* * * * * * * * * * * * * * * * * end of left aside */
+
+
+/* main  * * * * * * * * * * * * * * * * * * * * * * */
+
+main{
+	position: absolute;
+	background: inherit;
+	border-radius: 10px;
+	left: 18.5%;
+	top: 12%;
+	bottom: -2%;
+	width: 66%;
+	padding: 10px;
+	z-index: 99;
+}
+
+main > ol li:not(:first-child){margin-top: 1em}
+main p{text-align: justify}
+main p::first-letter{margin-left: 2rem}
+
+main p i:hover{
+	color: #f00;
+	display: inline-block;
+	cursor: pointer;
+	background: #cec;
+	transform: scaleX(1.08);
+	transition: all .4s;
+}
+
+/* * * * * * * * * * * * * * * * * * * * end of main */
+
+
+/* right aside * * * * * * * * * * * * * * * * * * * */
+
+#right-aside{
+	height: 88%;
+	right: 0;
+	align-items: center;
+}
+
+#right-aside > ol{padding: 0 5px}
+
+/* * * * * * * * * * * * * * * *  end of right aside */
+
+
+/* style for class */
+
+.d-flex{display: flex}
+
+.fl-col{flex-direction: column}
